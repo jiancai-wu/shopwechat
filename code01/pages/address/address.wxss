@@ -1,0 +1,26 @@
+/* pages/address/address.wxss */
+.address{
+    padding:10px;
+}
+.address view{
+    margin-bottom: 10px;
+}
+.address view text:nth-child(1){
+    color: rgb(226, 97, 97)
+}
+.address view text:nth-child(2){
+    margin-left: 10px;
+}
+.addAddress{
+    width: 100%;
+    height: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+    background-color: red;
+    position: fixed;
+    bottom: 0;
+    left: 0
+}

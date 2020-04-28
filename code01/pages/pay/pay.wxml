@@ -1,0 +1,43 @@
+<!--pages/pay/pay.wxml-->
+
+<view class="address">
+    <image class="iconAddress" src="../../image/icon-dw.png"></image>
+    <view class="pay_content" bindtap="getAddress">
+        
+        <view wx:for="{{address}}" wx:key="index">
+            <view class="name">
+                <text>{{item.username}}</text>
+                <text>{{item.usertel}}</text>
+            </view>
+            <view class="dw">
+                {{item.addressdetail}}
+            </view>
+        </view>
+        <image class="iconArrow" src="../../image/icon-arrow.png"></image>
+    </view>
+   
+</view>
+ <!-- 商品列表 -->
+<view class="pay_order">
+    <view class="thead tr">
+        
+        <view class="td">商品</view>
+        <view class="td">数量</view>
+        <view class="td">单价</view>
+    </view>
+    <view class="tbody tr" wx:for="{{good_list}}" wx:key="index">
+        <view class="td">{{item.carName}}</view>
+        <view class="td">{{item.carNum}}</view>
+        <view class="td">{{item.carPrice}}</view>
+    </view>
+</view>
+<view class="pay_remark">
+    <input placeholder="填写备注" type="text"></input>
+</view>
+
+<view class="car_bot">
+    <view class="car_bot_wrap">
+        总价 <text class="car_total_money">￥{{totalPrice}}</text>
+        <view class="car_order_confirm" bindtap="getPay">支付</view>
+    </view>
+</view>

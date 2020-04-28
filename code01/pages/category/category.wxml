@@ -1,0 +1,22 @@
+<!--pages/category/category.wxml-->
+<scroll-view scroll-y="true" class="categoryiteml" style="height:{{scrollHeight}}px;">
+    <view class="item" style="min-height:{{scrollHeight}}px;">
+        <view wx:for="{{categoryList}}" data-id="{{index}}"
+        bindtap="itemclick" wx:key="index" class="{{conId==index?'con':''}}">
+            {{item.txt}}
+        </view>
+        
+    </view>
+</scroll-view>
+<scroll-view class="categoryItemr" scroll-y="true" style="height:{{scrollHeight}}px;">
+    <view class="categoryList">
+        <view class="title">{{categoryList[conId].txt}}推荐</view>
+        <view class="content" wx:for="{{conicon}}" wx:key="index" bindtap="getdetail" data-id="{{index}}">
+            <navigator url="/pages/detail/detail?id={{item.id}}" hover-class="none" >
+                <image src="{{item.goodsImage}}"></image>
+                <view class="text">{{item.goodsName}}</view>
+            </navigator>
+        </view>
+        
+    </view>
+</scroll-view>

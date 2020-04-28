@@ -1,0 +1,41 @@
+<!--pages/order/order.wxml-->
+<view class="orderhanderList">
+    <view class="orderhander">
+        <view class="ordername {{orderId==index?'con':''}}" 
+        wx:for="{{ordername}}" 
+        wx:key="index"
+        data-id="{{index}}"
+        bindtap="itemclick"
+        >{{item}}</view>
+    </view>
+</view>
+<view class="order">
+    <view wx:for="{{ordergoodsLists}}" wx:for-index="index1" wx:key="index" class="clearfix orderList">
+        <view class="orderId">
+            <text>{{item.orderNumber}}</text>
+            <text class="fr">{{item.type}}</text>
+        </view>
+        <view class="goods_list" wx:for="{{item.goods}}" wx:key="index">
+            <view class="left">
+                <image src="{{item.goodsImage}}"></image>
+            </view>
+            <view class="right" >
+                <view class="goods_name">
+                    <text>{{item.gooodsName}}</text>
+                </view>
+                <view class="goods_price">
+                    <text>￥{{item.goodsPrice}}</text>
+                </view>
+                <view class="cart">
+                    <image src="../../image/shanchu.png" bindtap="del" data-id="{{index}}" data-rid="{{index1}}"></image>
+                </view>
+                <view class="car_item_operate">
+                    <text class="num">{{item.goodsNum}}</text>
+                </view>
+            </view>
+        </view>
+        <view class="paybtn" bindtap="operatepay" data-id="{{index1}}">{{item.btn}}</view>
+    </view>
+    
+</view>
+

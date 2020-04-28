@@ -1,0 +1,124 @@
+/* pages/order/order.wxss */
+.orderhanderList{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+.orderhander{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    /* border-bottom: 1px solid #ccc; */
+    box-sizing: border-box;
+   
+}
+.orderhander .ordername{
+    display: inline-block;
+    width: 25%;
+    text-align: center;
+    background-color: #fff;
+}
+.orderhander .ordername.con{
+    color: #FF7200;
+    position: relative;
+}
+/* .orderhander .ordername.con::after{
+    content: "";
+    width: 70%;
+    height: 3px;
+    background-color: #FF7200;
+    position: absolute;
+    bottom: 0;
+    left: 15%;
+} */
+.order{
+    margin-top:40px; 
+}
+.order .orderList{
+    padding: 10px ;
+}
+.fr{
+    float: right;
+    color: #f47378
+}
+.goods_list{
+    height: 100px;
+    padding-left: 100px;
+    position: relative;
+    
+}
+
+.ul>view view{
+    color: #fff;
+}
+.left{
+    position: absolute;
+    top: 10px;
+    left: 0px;
+}
+.left image{
+    width: 80px;
+    height: 80px;
+}
+.right{
+    padding: 10px 0;
+    height: 80px;
+    overflow: hiddle;
+}
+.goods_name{
+    font-size: 15px;
+}
+.goods_address{
+    color: #929292;
+    font-size: 12px;
+
+}
+.goods_price{
+    font-size: 14px;
+    color: #f47378;
+    width:100%;
+    line-height: 22px;
+    height: 22px;
+    margin-top: 5px;
+}
+.cart image{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+.cart_item_operate{}
+.btn{
+    display: inline-block;
+    white-space: 20px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 22px;
+    border: 1px solid #b2b2b2;
+    color: #929292;
+}
+.num{
+    margin-top: 5px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 22px;
+    color: #464444;
+}
+.paybtn{
+    width: 80px;
+    height: 24px;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 24px;
+    color: #fff;
+    background-color: #FF7200;
+    text-align: center;
+    float: right;
+    border-radius: 12px;
+}

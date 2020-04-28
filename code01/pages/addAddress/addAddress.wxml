@@ -1,0 +1,9 @@
+<!--pages/addAddress/addAddress.wxml-->
+<view>
+    <input class="name" type="text" placeholder="收货人" bindblur="inpname"></input>
+    <input class="tel" type="text" placeholder="手机号码" bindblur="inptel"></input>
+    <input class="name" type="text" placeholder="所在地区的详细地址" bindblur="inpdetail"></input>
+</view>
+<view class="save">
+    <view class="savebtn" bindtap="save">保存</view>
+</view>

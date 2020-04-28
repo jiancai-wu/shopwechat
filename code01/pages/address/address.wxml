@@ -1,0 +1,16 @@
+<!--pages/address/address.wxml-->
+<view class="address" wx:for="{{addressList}}" wx:key="index" bindtap="address" data-id="{{index}}">
+    <view>
+        <text>姓名:</text>
+        <text class="name">{{item.username}}</text>
+    </view>
+    <view>
+        <text>电话:</text>
+        <text class="tel">{{item.usertel}}</text>
+    </view>
+    <view>
+        <text>详细地址:</text>
+        <text class="addressdetail">{{item.addressdetail}}</text>
+    </view>
+</view>
+<view class="addAddress" bindtap="addAddress">+新增地址</view>

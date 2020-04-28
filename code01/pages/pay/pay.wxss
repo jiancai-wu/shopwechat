@@ -1,0 +1,101 @@
+/* pages/pay/pay.wxss */
+page{
+    background-color: #f5f6f7;
+}
+.address{
+    padding: 10px;
+    position: relative;
+    background: #fff;
+    margin-bottom: 10px;
+}
+.address image{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.pay_content{
+    margin: 0 30px;
+
+}
+.name text:nth-child(2){
+    margin-left: 5px;
+}
+.address .dw{
+    font-size: 12px;
+}
+.address .iconArrow{
+    left: auto;
+    top: 20px;
+    right: 20px;
+}
+
+.pay_order{
+    background-color: #fff;
+    margin-bottom:10px; 
+}
+.pay_order .thead{
+    font-size: 14px;
+    padding: 10px;
+    border-bottom: 1px solid #e5e5e5;
+}
+.pay_order .tr .td{
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.pay_order .tbody{
+    padding: 5px 10px;
+    font-size: 12px;
+    margin-bottom: 1px;
+}
+.pay_order .tr .td:nth-child(1){
+    width: 60%;
+}
+.pay_order .tr .td:nth-child(2){
+    width: 20%;
+}
+.pay_order .tr .td:nth-child(3){
+    width: 20%;
+}
+
+.pay_remark{
+    background: #fff;
+    height: 40px;
+    line-height: 40px;
+}
+.pay_remark input{
+    height: 40px;
+    line-height: 20px;
+    padding-left: 20px;
+}
+
+.car_bot{
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    bottom: 0;
+    border-bottom: 1px solid #e5e5e5;
+    font-size: 14px;
+}
+.car_bot_wrap{
+    padding: 10px;
+    height: 30px;
+    line-height: 30px;
+}
+.car_total_money{
+    color: #ff0000;
+    margin-left: 5px;
+}
+.car_order_confirm{
+    float: right;
+    background: #ff7e3c;
+    width: 100px;
+    height: 30px;
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 15px;
+}

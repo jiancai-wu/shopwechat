@@ -1,0 +1,74 @@
+<!--pages/cart/cart.wxml-->
+<view wx:if="{{isEmpty}}" class="goods_list" wx:for="{{goodsList}}" wx:key="index">
+    <view class="left">
+        <image src="{{item.carImage}}"></image>
+    </view>
+    <view class="right" >
+        <view class="goods_name">
+            <text>{{item.carName}}</text>
+        </view>
+        <view class="goods_price">
+            <text>￥{{item.carPrice}}</text>
+        </view>
+        <view class="cart">
+            <image src="../../image/shanchu.png" bindtap="carDel" data-id="{{index}}"></image>
+        </view>
+        <view class="car_item_operate">
+            <view class="reduce btn" bindtap="carReduce" data-id="{{index}}">-</view>
+            <text class="num">{{item.carNum}}</text>
+            <view class="add btn" bindtap="carAdd" data-id="{{index}}">+</view>
+        </view>
+    </view>
+</view>
+<view class="empty" wx:if="{{!isEmpty}}">
+    <view class="text">
+       <view class="box">
+            购物车没有商品哦
+            <view>
+                <text class="getindex" bindtap="getindex">去商城看看</text>
+            </view>
+       </view>
+    </view>
+    
+    <view class="like">
+        <view class="likeBox">
+            ---  猜你喜欢  ---
+            <view>
+                <text class="allLike">大家都喜欢的好物</text>
+            </view>
+        </view>
+    </view>
+    <view class="clearfix goods_listBox">
+        <view class="goods_lists" wx:for="{{likeGoodsList}}" wx:key="index">
+            <navigator url="/pages/detail/detail?id={{item.id}}" hover-class="none" >
+                <view class="img">
+                    <image src="{{item.goodsImage}}"></image>
+                </view>
+                <view class="goodsinfo">
+                    <view class="goods_name">
+                        <text>{{item.goodsName}}</text>
+                    </view>
+                    <view class="goods_address">
+                        <text>{{item.goodsAddress}}</text>
+                    </view>
+                    <view class="goods_price">
+                        <text>￥{{item.goodsPrice}}</text>
+                    </view>
+                    <view class="cart">
+                        <image src="../../image/car.png"></image>
+                    </view>
+                </view>
+            </navigator>
+
+        </view>
+    </view>
+</view>
+<!-- 商品列表end -->
+
+<!--  -->
+<view class="car_bot">
+    <view class="car_bot_wrap">
+        总价 <text class="car_total_money">￥{{totalPrice}}</text>
+        <view class="car_order_confirm" bindtap="getPay">下单</view>
+    </view>
+</view>

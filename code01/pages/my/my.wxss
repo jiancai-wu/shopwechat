@@ -1,0 +1,54 @@
+/* pages/my/my.wxss */
+page{
+    background-color: #f8f8f8;
+}
+.personal_info{
+    padding: 20px 0;
+    background-color: #fff;
+
+}
+.photo_wrap{
+    text-align: center;
+}
+button{
+    margin: 0 0 10px;
+    background-color: #e5e5e5;
+}
+.photo_wrap image{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+}
+.nickname{
+    color: #696969;
+    text-align: center
+}
+
+.ul{
+    
+    border-top: 1px solid #f3f3f3;
+}
+.li{
+    padding: 0 10px;
+    height: 45px;
+    line-height: 45px;
+    border-bottom: 1px solid #e5e5e5;
+    position: relative;
+    font-size: 16px;
+    background-color: #fff;
+}
+.li image{
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+}
+.exit{
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    font-size: 16px;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+}
